@@ -15,8 +15,12 @@
 */
 
 //Code here
-
-////////// PROBLEM 2 //////////
+let me = {
+  name: "Django",
+  age: 254
+}
+me.name;
+////////// PROBLeM 2 //////////
 
 /*
   Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday.
@@ -24,6 +28,14 @@
 */
 
 //Code here
+let favoriteThings = {
+  band: "Nikelback",
+  food: "Pizza",
+  person: "DaBaby",
+  book: "Audible",
+  movie: "Planet Earth",
+  holiday: "death day"
+}
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car
@@ -31,14 +43,16 @@
 */
 
 //Code here
-
+favoriteThings.car = "Geo Metro";
+favoriteThings.brand = "ikea";
 /*
   Now use bracket or dot notation to change the value of the food key in your favoriteThings object to be 'Chicken Nuggets'
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
 */
 
 //Code here
-
+favoriteThings.food = "Chicken Nuggets";
+favoriteThings['book'] = "Harry Potter";
 ////////// PROBLEM 3 //////////
 
 /*
@@ -50,13 +64,15 @@
 */
 
 //Code here
-
+let backPack = {}
+let item = 'firstPocket';
+backPack[item] = "chapstick";
 /*
   After you do the above, alert your entire backPack object.
 */
 
 //Code here
-
+backPack;
 /*
 You probably noticed that it just alerted [object Object].
 Alerting to see the data in your Object doesn't work so well.
@@ -64,7 +80,7 @@ Instead, console.log your whole backPack object and then check out the console.
 */
 
 //Code here
-
+console.log(backPack)
 ////////// PROBLEM 4 //////////
 
 // Do not edit the code below.
@@ -85,6 +101,8 @@ var user2 = {
 */
 
 //Code Here
+user2.name = 'Bryan G. Smith'
+user2.email = "bryan.smith@devmounta.in"
 
 /////////////////////// EXTRA PRACTICE PROBLEMS BELOW ////////////////////
 ////////// MOVE ONTO NEXT SECTION BEFORE WORKING ON THESE ////////////////
@@ -96,20 +114,26 @@ var user2 = {
 */
 
 //Code Here
-
+let methodCollection = {};
 /*
   Now add two methods (functions that are properties on objects) to your methodCollection object.
   One called 'alertHello' which alerts 'hello' and another method called 'logHello' which logs 'hello' to the console.
 */
 
 //Code Here
-
+methodCollection.alertHello = function(){
+  alert('hello');
+}
+methodCollection.logHello = function(){
+  console.log('hello');
+}
 /*
   Now call your alertHello and logHello methods.
 */
 
 //Code Here
-
+// methodCollection.alertHello()
+// methodCollection.logHello();
 ////////// PROBLEM 6 //////////
 
 /*
@@ -118,7 +142,14 @@ var user2 = {
 */
 
 //Code Here
-
+function makePerson(name, birthday, ssn){
+  let person = {
+    name: name,
+    birthday: birthday,
+    ssn: ssn
+  }
+  return person;
+}
 ////////// PROBLEM 7 //////////
 
 /*
@@ -127,3 +158,11 @@ var user2 = {
 */
 
 //Code Here
+function makeCard(cardNumber, expirationDate, securityCode){
+  let card = {
+    cardNumber: cardNumber,
+    expirationDate: expirationDate,
+    securityCode: securityCode
+  }
+  return card;
+}
